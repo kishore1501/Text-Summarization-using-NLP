@@ -72,9 +72,9 @@ def fetch_news_links(query):
     thumbnail_list = []
 
     if query == "":
-        reqUrl = "https://newsapi.org/v2/everything?sources=bbc-news&q=india&language=en&apiKey={}".format(news_api_key)
+        reqUrl = "https://newsapi.org/v2/everything?sources=bbc-news&q=india&language=en&apiKey=ac5568e7ad914659b1d66c0ee6929560".format(news_api_key)
     else:
-        reqUrl = "https://newsapi.org/v2/everything?sources=bbc-news&q={}&language=en&apiKey={}".format(query, news_api_key)
+        reqUrl = "https://newsapi.org/v2/everything?sources=bbc-news&q={}&language=en&apiKey=ac5568e7ad914659b1d66c0ee6929560".format(query, news_api_key)
     
     headersList = {
     "Accept": "*/*",
@@ -85,6 +85,9 @@ def fetch_news_links(query):
 
     response = requests.request("GET", reqUrl, data=payload,  headers=headersList).text
     response = json.loads(response)
+
+    print(response)
+
 
     tw = 0
     for i in range(len(response["articles"])):

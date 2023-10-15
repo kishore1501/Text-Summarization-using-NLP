@@ -14,7 +14,6 @@ st.set_page_config(
      }
 )
 
-
 st.sidebar.title("Text Summarization Web App")
 
 option = ["News Summary and Headlines", "Custom Text Summarization"]
