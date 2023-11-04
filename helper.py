@@ -33,8 +33,6 @@ def spacy_rander(summary, text=None):
     
     return rend
 
-
-
 def word_frequency(doc):
     word_frequencies = {}
 
@@ -104,8 +102,6 @@ def fetch_news_links(query):
 
     return link_list, title_list, thumbnail_list
 
-
-
 @st.cache(allow_output_mutation=False)
 def fetch_news(link_list):
 
@@ -132,9 +128,6 @@ def fetch_news(link_list):
         news.clear()
     
     return news_list
-
-
-
 
 def get_summary(text):
     
